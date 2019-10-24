@@ -6,7 +6,7 @@
                 placeholder="Search Movies">
         </div>
 
-        <button class="btn btn-default" modal-trigger>
+        <button class="btn btn-default" modal-trigger="searchResults">
             Search
         </button>
     </form>
@@ -14,7 +14,7 @@
 
 
 
-<simple-modal title="matchingMovies">
+<simple-modal title="matchingMovies" elementId="searchResults">
     <div class="list-group">
         <a class="list-group-item" *ngFor="let movie of foundMovies"
             [routerLink]="['/movies', movie.movieId]">{{movie.title}}</a>
